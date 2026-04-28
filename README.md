@@ -32,7 +32,7 @@ To maximize ingestion speed into Synapse, I utilized **Staged Copying**. By usin
 
 ## 📊 Results & Evidence
 
-### Pipeline Execution Proof
+### Pipeline Execution
 The pipeline successfully orchestrated the movement of data, validating the networking and authentication handshake.
 ![Pipeline Success](images/piped.png)
 
