@@ -21,14 +21,17 @@ The architecture was specifically designed for high security and performance, ut
 
 ### 1. Enterprise-Grade Security (Managed VNet)
 Instead of using public endpoints, I implemented a **Managed Virtual Network** within ADF. I successfully configured and approved **Managed Private Endpoints** to create a secure "tunnel" to Synapse and SQL DB, ensuring data never touched the public internet.
+
 ![Private Endpoint Proof](images/30748e.png)
 
 ### 2. Password-less Authentication (RBAC)
 To follow security best practices, I moved away from SQL Authentication. I configured **System-Assigned Managed Identity** for the Data Factory, granting it `db_owner` permissions via T-SQL, enabling secure, credential-free access.
+
 ![Identity Proof](images/3077ba.png)
 
 ### 3. Optimized Performance (Staged Copy)
 To maximize ingestion speed into Synapse, I utilized **Staged Copying**. By using an Azure Blob Storage staging area, the pipeline leverages the **Bulk Insert/Copy Command** for significantly faster throughput compared to standard row-by-row insertion.
+
 ![Pipeline Success](images/307b94.png)
 
 ---
@@ -37,10 +40,12 @@ To maximize ingestion speed into Synapse, I utilized **Staged Copying**. By usin
 
 ### Pipeline Execution
 The pipeline successfully orchestrated the movement of data, validating the networking and authentication handshake.
+
 ![Pipeline Success](images/piped.png)
 
 ### Data Verification
 A SQL query within the Synapse Workspace confirms the successful migration and integrity of the client data.
+
 ![SQL Query Result](images/SQL.png)
 
 ---
