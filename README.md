@@ -30,6 +30,7 @@ To follow security best practices, I moved away from SQL Authentication. I confi
 ### 3. Optimized Performance (Staged Copy)
 To maximize ingestion speed into Synapse, I utilized **Staged Copying**. By using an Azure Blob Storage staging area, the pipeline leverages the **Bulk Insert/Copy Command** for significantly faster throughput compared to standard row-by-row insertion.
 ![Pipeline Success](images/307b94.png)
+
 ---
 
 ## 📊 Results & Evidence
