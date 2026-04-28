@@ -1,0 +1,10 @@
+{
+	"name": "AzureSynapseAnalytics846",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/110d8e13-3505-41c3-92cd-7927faa4de6b/resourceGroups/Datafactory/providers/Microsoft.Synapse/workspaces/synworkspacex",
+		"groupId": "sql",
+		"fqdns": [
+			"synworkspacex.sql.azuresynapse.net"
+		]
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"name": "SourceDataset_q35",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "first_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "last_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "email",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "client_data"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

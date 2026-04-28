@@ -1,0 +1,41 @@
+{
+	"name": "SourceDataset_xsj",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "client_data.csv",
+				"container": "containerclients"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "id",
+				"type": "String"
+			},
+			{
+				"name": "first_name",
+				"type": "String"
+			},
+			{
+				"name": "last_name",
+				"type": "String"
+			},
+			{
+				"name": "email",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,15 @@
+{
+	"name": "Datafactoz",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "canadacentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6f108cd8-2461-4599-907c-457f769f33d6",
+		"tenantId": "e5d15069-41a2-48be-a3f3-d7f52db16425"
+	}
+}

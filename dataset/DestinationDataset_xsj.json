@@ -1,0 +1,17 @@
+{
+	"name": "DestinationDataset_xsj",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "client_data"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

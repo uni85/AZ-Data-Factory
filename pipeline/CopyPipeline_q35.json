@@ -1,0 +1,107 @@
+{
+	"name": "CopyPipeline_q35",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_q35",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "dbo.client_data"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.client_data"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"writeBehavior": "Insert",
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "AzureBlobStorage1",
+							"type": "LinkedServiceReference"
+						}
+					},
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "first_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "first_name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "last_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "last_name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "email",
+									"type": "String"
+								},
+								"sink": {
+									"name": "email",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_q35",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_q35",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-04-28T14:14:12Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

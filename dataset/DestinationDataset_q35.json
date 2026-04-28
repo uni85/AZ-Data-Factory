@@ -1,0 +1,17 @@
+{
+	"name": "DestinationDataset_q35",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_synapse_destination",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "client_data"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
